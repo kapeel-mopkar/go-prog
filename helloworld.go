@@ -1,10 +1,10 @@
 package main
 
 import (
-	"DataAccess"
-	"DataAccess/DB"
-	dbCfg "DataAccess/DB/Config" // package aliases
-	"DataAccess/File"
+	"go-prog/DataAccess"
+	"go-prog/DataAccess/DB"
+	dbCfg "go-prog/DataAccess/DB/Config" // package aliases
+	"go-prog/DataAccess/File"
 
 	//fileCfg "DataAccess/File/Config" // package aliases
 	"fmt"

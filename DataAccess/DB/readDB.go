@@ -1,8 +1,8 @@
 package DB
 
 import (
-	"DataAccess/File"
 	"fmt"
+	"go-prog/DataAccess/File"
 )
 
 func ReadSQLDB() {
