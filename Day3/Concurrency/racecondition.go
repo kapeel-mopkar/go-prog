@@ -7,15 +7,15 @@ import (
 	"time"
 )
 
-var wg sync.WaitGroup
+var wg1 sync.WaitGroup
 var counter int
 var mutx sync.Mutex
 
 func main() {
-	wg.Add(2)
+	wg1.Add(2)
 	go incrementor("Foo :")
 	go incrementor("Bar :")
-	wg.Wait()
+	wg1.Wait()
 	fmt.Println("Final Counter: ", counter)
 }
 
@@ -31,6 +31,6 @@ func incrementor(s string) {
 		mutx.Unlock() // Avoiding race conditions using mutex.Lock/Unlock
 		fmt.Println(s, i, "counter: ", counter)
 	}
-	wg.Done()
+	wg1.Done()
 
 }

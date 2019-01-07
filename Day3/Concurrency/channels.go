@@ -9,7 +9,7 @@ import (
 var wg sync.WaitGroup
 
 func main() {
-	ch1 := make(chan int)
+	ch1 := make(chan int) // unbuffered channel
 
 	wg.Add(2)
 	go func1(ch1) // go routine
