@@ -70,6 +70,6 @@ func variadicFunc2(name string, age int, values ...int) {
 
 func variadicExample(i ...interface{}) {
 	for index, v := range i {
-		fmt.Println(index, reflect.TypeOf(v))
+		fmt.Println(index, reflect.ValueOf(v).Type().Kind())
 	}
 }
